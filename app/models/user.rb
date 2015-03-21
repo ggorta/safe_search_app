@@ -18,6 +18,11 @@ class User < ActiveRecord::Base
   #   end
   # end
 
+  def self.authenticate(email, password)
+    user = find_by_email(email)
+    return user
+  end
+
   # def encrypt_password
   #   if password.present?
   #     self.password_salt = BCrypt::Engine.generate_salt
