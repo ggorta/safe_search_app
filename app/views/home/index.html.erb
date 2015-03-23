@@ -3,84 +3,100 @@
   <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
+<<<<<<< HEAD
   <link rel="stylesheet" href="./one.css"> -->
+  <link rel="stylesheet" href="./two.css">
+
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-fixed-top" id="nav">
     <div class="container">
       <div class="navbar-header">
-        <!--
+
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>-->
-      <a class="navbar-brand" href="#top">APP NAME</a>
-    </div>
-    <!--
-    <div id="navbar" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav navbar-right">
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
--->
-
-</div>
-</nav>
-
-<a name="top"></a>
-
-<div class="container">
-  <div class="jumbotron">
-
-    <h2>Hi, Input... (<a href="/log_out">logout</a>)</h2>
-    <p>height and spacing will be adjusted later</p>
-    <p><%= @quoteStr %></p>
-    <br />
-    <br />
-    <br />
-  </div>
-</div>
-
-<div class="row">
-  <div class="container">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="col-md-1"></div>
-        <div class="col-md-10" id="form">
-<!--           <form method="POST" action="search">
-            <label>Search:</label>
-            <input type="text" name="search_term" placeholder="what are you searching for?" id="field" required>
-            &nbsp;
-            <label>Safe search?</label>
-            &nbsp;
-            <input type="checkbox" name="safe_search">
-            &nbsp;
-            &nbsp;
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-              <i class="mdi-content-send right"></i>
-            </button>
-            <div class="col-md-1"></div>
-          </form> -->
-
-          <%= form_tag "/search" do %>
-            <%= label_tag :query %><br/>
-            <%= text_field_tag :query %>
-            <br/>
-            <br/>
-
-            <%= submit_tag "Search" %>
-          <% end %>
-          </div>
-
-        </div>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top" id="name">SANDBOX</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-th"></span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-lock"></span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-cog"></span></i></a></li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
+
+  <a name="top"></a>
+
+  <div class="row">
+    <div class="container" id="greeting">
+      <div class="col-md-5">
+
+        <h1>Hi Input... (<a href="/log_out">logout</a>)</h1>
+        <br />
+        <p class="lead"><%= @quoteStr %></p>
+        <div id="find">
+          <form id="cse-search-box" action="http://www.google.com/cse">
+            <input id="search" type="text" name="q">
+            <input id="submit" type="submit" value="Search">
+            <input type="hidden" name="cx" value="013474379445953100237:sx5yuk89gso">
+            <input type=hidden name=safe value=active>
+            <input type="hidden" name="ie" value="UTF-8">
+          </form>
+        </div><!--find-->
+      </div><!--col-md-5-->
+    </div><!--greeting-->
+    <div class="col-md-3">
+      &nbsp;
+    </div>
+    <div class="col-md-4">
+      <div id="player"></div>
+    </div>
+  </div><!--row-->
+
+  <!--
+  <div class="row">
+  <div class="container">
+  <div class="panel panel-default">
+  <div class="panel-body">
+  <div class="col-md-1"></div>
+  <div class="col-md-10" id="form">-->
+  <!--           <form method="POST" action="search">
+  <label>Search:</label>
+  <input type="text" name="search_term" placeholder="what are you searching for?" id="field" required>
+  &nbsp;
+  <label>Safe search?</label>
+  &nbsp;
+  <input type="checkbox" name="safe_search">
+  &nbsp;
+  &nbsp;
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+  <i class="mdi-content-send right"></i>
+</button>
+<div class="col-md-1"></div>
+</form> -->
+<!--
+<%= form_tag "/search" do %>
+<%= label_tag :query %><br/>
+<%= text_field_tag :query %>
+<br/>
+<br/>
+
+<%= submit_tag "Search" %>
+<% end %>
 </div>
+
+</div>
+</div>
+</div>
+</div>
+</div> -->
 
 <div class="row">
   <div class="container">
@@ -92,31 +108,18 @@
 
 <div class="row">
   <div class="container" id="columns">
-    <div class="col-md-3">
-      <h3>Watch</h3>
-      <p><a href="">link 1</a></p>
-      <p><a href="">link 2</a></p>
-      <p><a href="">link 3</a></p>
+    <div class="col-md-4">
+      <img src="./explore.png" class="img-responsive" alt="Responsive image">
     </div>
-    <div class="col-md-3"><h3>Play</h3>
-      <p><a href="">link 1</a></p>
-      <p><a href="">link 2</a></p>
-      <p><a href="">link 3</a></p>
+    <div class="col-md-4">
+      <img src="./play.png" class="img-responsive" alt="Responsive image">
     </div>
-    <div class="col-md-3">
-      <h3>Listen</h3>
-      <p><a href="">link 1</a></p>
-      <p><a href="">link 2</a></p>
-      <p><a href="">link 3</a></p>
+    <div class="col-md-4">
+      <img src="./favsites.png" class="img-responsive" alt="Responsive image">
     </div>
-    <div class="col-md-3">
-      <h3>Learn</h3>
-      <p><a href="">link 1</a></p>
-      <p><a href="">link 2</a></p>
-      <p><a href="">link 3</a></p>
-    </div>
-  </div>
-</div>
+  </div><!--columns-->
+</div><!--row-->
+
 
 <script>
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -131,9 +134,9 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '390',
-    width: '640',
-    videoId: 'Ood3teygwh8',
+    height: '290',
+    width: '540',
+    videoId: 'CgJKLhQMVzk',
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
