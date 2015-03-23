@@ -23,6 +23,7 @@ class SearchController < ApplicationController
     opts = Hash.new
     opts[:part] = 'id,snippet'
     opts[:q] = params[:query]
+    opts[:safeSearch]='strict'
     search_response = client.execute!(
       :api_method => youtube.search.list,
       :parameters => opts
