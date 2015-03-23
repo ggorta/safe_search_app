@@ -5,6 +5,7 @@ gem 'httparty'
 # gem 'flickr.rb', '~> 1.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails_12factor', group: :production
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
