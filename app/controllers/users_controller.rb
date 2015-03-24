@@ -31,4 +31,3 @@ def user_params
   end
 
 end
-
