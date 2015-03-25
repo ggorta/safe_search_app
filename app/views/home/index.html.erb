@@ -1,4 +1,34 @@
 <head>
+
+  <title>layout one</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="./one.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!--
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>-->
+      <a class="navbar-brand">SANDBOX</a>
+    </div>
+    <!--
+    <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+-->
   <title>SANBOX</title>
   <!--
 <<<<<<< HEAD
@@ -11,6 +41,44 @@
 
   <link rel="stylesheet" href="two.css">
 
+
+<div class="welcome">
+  <h2>Welcome to SandBox</h2>
+  <p><%= @quoteStr %></p><br/>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" id="form">
+<!--           <form method="POST" action="search">
+            <label>Search:</label>
+            <input type="text" name="search_term" placeholder="what are you searching for?" id="field" required>
+            &nbsp;
+            <label>Safe search?</label>
+            &nbsp;
+            <input type="checkbox" name="safe_search">
+            &nbsp;
+            &nbsp;
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="mdi-content-send right"></i>
+            </button>
+            <div class="col-md-1"></div>
+          </form> -->
+
+          <%= form_tag "/search" do %>
+            <%= label_tag :Search_YOUTUBE_Content%><br/>
+            <%= text_field_tag :query %>
+            <br/>
+            <br/>
+
+            <%= submit_tag "Search" %>
+          <% end %>
+          </div>
+
+        </div>
 </head>
 
 <body>
@@ -25,6 +93,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#top" id="name">SANDBOX</a>
+
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -61,10 +130,19 @@
       &nbsp;
     </div>
   </div>
+
+</div>
+
+<div id="videoContainer">
+  <div id="map">
+  </div>
+</div>
+
   <div class="container">
     <div class="col-md-4">
       <div id="player"></div>
     </div>
+
   </div>
   </div><!--row-->
 
@@ -100,6 +178,10 @@
 <% end %>
 </div>
 
+
+
+<!-- <div class="row">
+
 </div>
 </div>
 </div>
@@ -107,6 +189,7 @@
 </div> -->
 
 <div class="row">
+
   <div class="container" id="columns">
     <div class="col-md-4">
       <div class="img-responsive">
@@ -119,6 +202,10 @@
     <div class="col-md-4">
       <%= image_tag "favsites.png" %>
     </div>
+
+  </div>
+</div> -->
+
   </div><!--columns-->
 </div><!--row-->
 

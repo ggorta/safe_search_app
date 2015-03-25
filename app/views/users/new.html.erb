@@ -1,4 +1,5 @@
-<h1>Register:</h1>
+<div class="register">
+<h3>Register for Sandbox</h3>
 
 <%= form_for @user do |f| %>
   <%= f.label :name, "Name" %>:
@@ -8,4 +9,8 @@
   <%= f.label :password, "Password" %>:
   <%= f.password_field :password %><br>
   <%= f.submit %>
+
 <% end %>
+
+</div>
+
