@@ -50,7 +50,7 @@
             <input id="search" type="text" name="q">
             <input id="submit" type="submit" value="Search">
             <input type="hidden" name="cx" value="013474379445953100237:sx5yuk89gso">
-            <input type=hidden name=safe value=active>
+            <input type="hidden" name="safe" value="active">
             <input type="hidden" name="ie" value="UTF-8">
           </form>
         </div><!--find-->
@@ -109,13 +109,15 @@
 <div class="row">
   <div class="container" id="columns">
     <div class="col-md-4">
-      <img src="app/assets/images/explore.png" class="img-responsive" alt="Responsive image">
+      <div class="img-responsive">
+      <%= image_tag "explore.png" %>
+    </div>
     </div>
     <div class="col-md-4">
-      <img src="./play.png" class="img-responsive" alt="Responsive image">
+      <%= image_tag "play.png" %>
     </div>
     <div class="col-md-4">
-      <img src="./favsites.png" class="img-responsive" alt="Responsive image">
+      <%= image_tag "favsites.png" %>
     </div>
   </div><!--columns-->
 </div><!--row-->
