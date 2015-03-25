@@ -10,7 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require materialize
+ *= require skeleton
  *= require_tree .
  *= require_self
  */
@@ -49,6 +49,9 @@
   text-decoration: none;
   line-height: 6.5rem;
   color: #222;
+  position: relative;
+  top: 20px;
+  left:40px;
 }
 
 
@@ -62,16 +65,7 @@
   margin-top: 40px;
 }
 
-.logo {
-  float: left;
-  height: 60px;
-}
 
-.has-docked-nav .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 .navbar-list {
   list-style: none;
@@ -113,13 +107,21 @@
 }
 
 
-#videoContainer {
-  width: 70%;
-  height: 70vh;
-  float: right;
-  padding-top: 60px;
-  padding-right: 150px;
+.navbar-brand
+{
+  float: left;
+  padding-top: 20px;
+  color:black;
+  font-size: 20px;
 }
 
+.welcome{
+  padding-top: 40px;
+}
 
+html{
+  background-color: #20B2AA
+
+;
+}
 
